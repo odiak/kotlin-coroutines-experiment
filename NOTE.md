@@ -286,4 +286,9 @@ final class net.odiak.kotlin_coroutines_experiment.AppKt$main$1 extends kotlin.c
   - https://github.com/JetBrains/kotlin/blob/0a2269cccbe559f4051a99584d0e76efdb2dc893/libraries/stdlib/jvm/src/kotlin/coroutines/jvm/internal/ContinuationImpl.kt#L15
   - 本丸はresumeWithの実装
     - 自身のinvokeSuspendを呼ぶ
-
+- ちなみにdelay関数はイベントループで実装されているっぽい
+  - https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-core/common/src/Delay.kt
+  - https://github.com/Kotlin/kotlinx.coroutines/blob/1b34e1c7dd6207d7683c307bae0b934a3dc18d09/kotlinx-coroutines-core/jvm/src/DefaultExecutor.kt#L10
+    - Delayインターフェースのデフォルト実装
+  - https://github.com/Kotlin/kotlinx.coroutines/blob/583ec6e862fb70c7fc0232af948a028bab3b20de/kotlinx-coroutines-core/common/src/EventLoop.common.kt#L179
+    - さらにその基底クラス
